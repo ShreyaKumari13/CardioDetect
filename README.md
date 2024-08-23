@@ -1,3 +1,6 @@
+HeartGuard: Heart Disease Detection and Prediction Web Application
+HeartGuard is a full-stack web application designed to predict the likelihood of a heart attack using multiple machine learning models. The backend is powered by Python with Flask and NLTK, and the frontend is crafted with HTML, CSS, and JavaScript. To enhance user experience, the application also includes an integrated chatbot that provides common disease treatment recommendations.
+
 This is a web application which uses multiple ML models, Python(Flask and NLTK) in the backend for predicting heart attack percentage of a person, Front-End is designed through HTML/CSS & JS, also integrated a chatbot for seamless user experience which replies with common diseases treatment recommendations.
 
 installation
