@@ -1,0 +1,6 @@
+Flask_cors
+Flask 
+torch
+torchvision
+nltk
+gunicorn

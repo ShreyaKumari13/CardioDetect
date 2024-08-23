@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login & Registration Form</title>
+  <style>
+    /* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 8px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  min-height: 100vh;
+  width: 100%;
+  background:  linear-gradient(rgb(0 0 0), rgba(0, 0, 10, 0.7)), url(/hackathon-project/images/cover-bg.jpg);
+  overflow: hidden; /* Hide overflowing content */
+}
+.canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place behind other content */
+}
+.container{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      max-width: 430px;
+      width: 100%;
+      background: #fff;
+      border-radius: 7px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    }
+.container .registration{
+  display: none;
+}
+.container .forgot{
+  display:none;
+}
+#check{
+  display: none;
+}
+.container .form{
+  padding: 2rem;
+}
+.form header{
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+ .form input{
+   height: 50px;
+   width: 100%;
+   padding: 0 15px;
+   font-size: 17px;
+   margin-bottom: 10px;
+   border: 1px solid #ddd;
+   border-radius: 6px;
+   outline: none;
+ }
+ .form input:focus{
+   box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+ }
+.form input.button{
+  color: #fff;
+  background: rgb(79 83 98);
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.form input.button:hover{
+  background: #006653;
+}
+.signup{
+  font-size: 17px;
+  text-align: center;
+}
+.signup a{
+  color: #009579;
+  cursor: pointer;
+}
+.signup a:hover{
+  text-decoration: underline;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px; /* Adjust width as needed */
+    max-width: calc(100% - 40px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.popup.show {
+    display: block;
+    opacity: 1;
+}
+
+.popup-overlay.show {
+    display: block;
+    opacity: 1;
+}
+
+.popup header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.popup p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.popup button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #272931;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.popup button:hover {
+    background-color: #45a049;
+}
+footer span:hover {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    }
+    .navbar-brand {
+      text-align: center; /* Center align the text */
+      margin-top: 50px; /* Add some top margin for positioning */
+    }
+
+    .navbar-brand h1 {
+      color: white;
+      transition: text-shadow 0.3s ease;
+      margin-bottom: 20px; /* Add some bottom margin for spacing */
+      font-size: 40px;
+    }
+
+    .navbar-brand:hover h1 {
+      text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    }
+    /* Apply transition to placeholder */
+.form input[type="text"]::placeholder,
+.form input[type="password"]::placeholder {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Adjust placeholder on focus */
+.form input[type="text"]:focus::placeholder,
+.form input[type="password"]:focus::placeholder {
+  opacity: 0.7;
+  transform: translateY(-50%);
+}
+
+/* CSS for the animated kid */
+.monkey-container {
+      position: absolute;
+      top: 50%;
+      right: calc(50% - 300px); /* Adjust to position the monkey */
+      transform: translateY(-50%);
+    }
+
+    .monkey {
+      width: 250px;
+      height: 250px;
+      background-color: #e0ac69; /* Light brown */
+      border-radius: 50%;
+      position: relative;
+      animation: swing 2s ease-in-out infinite alternate; /* Add swinging animation */
+    }
+
+    .tail {
+      width: 50px;
+      height: 50px;
+      background-color: #e0ac69; /* Light brown */
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: -30px;
+      transform: translateY(-50%);
+    }
+
+    /* Define animation for swinging */
+    @keyframes swing {
+      0% { transform: rotate(0); }
+      100% { transform: rotate(10deg); }
+    }
+
+
+    </style>
+</head>
+<body>
+  <div class="canvas-container"></div>
+  </div>
+  <nav class="navbar" id="navbar1">
+    <div class="navbar-brand">
+      <a style="text-decoration: none;" href="#" class="a-link">
+        <h1>HeartCare</h1>
+      </a>
+    </div>
+    <!-- Rest of your navigation code -->
+  </nav>
+  <div class="container">
+    <input type="checkbox" id="check">
+    <div class="login form">
+      <header>Admin Login</header>
+      <form action="#">
+        <input type="text" id='inUsr' placeholder="Enter admin email">
+        <input type="password" id="inPass" placeholder="Enter admin password">
+        <input type="button" class="button adminbtn" value="Login">
+      </form>
+    </div>
+  </div>
+  
+  <div id="sfcsfwygkwks5a72q6dpc468l7ls5b72u5t"></div><script type="text/javascript" src="https://counter11.optistats.ovh/private/counter.js?c=sfwygkwks5a72q6dpc468l7ls5b72u5t&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="web page visitor counter"><img src="https://counter11.optistats.ovh/private/freecounterstat.php?c=sfwygkwks5a72q6dpc468l7ls5b72u5t" border="0" title="web page visitor counter" alt="web page visitor counter"></a></noscript>
+  <a href="https://www.freecounterstat.com" title="web page visitor counter"></a>
+  <div class="popup-overlay" id="popup-overlay"></div>
+  <div class="popup" id="popup">
+    <header>Message</header>
+    <p id="popup-message"></p>
+    <button onclick="closePopup()">Close</button>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyABQQ8jOO8pR17rfVe64G-_elusiNbKnNg",
+    authDomain: "login-signup-7fcd7.firebaseapp.com",
+    projectId: "login-signup-7fcd7",
+    storageBucket: "login-signup-7fcd7.appspot.com",
+    messagingSenderId: "403801923999",
+    appId: "1:403801923999:web:b3c71b0ba5b14a0c285daa"
+};
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
+const firestore = firebase.firestore();
+const signupForm = document.querySelector('.registration.form');
+const loginForm = document.querySelector('.login.form');
+const forgotForm=document.querySelector('.forgot.form');
+const container=document.querySelector('.container');
+const signupBtn = document.querySelector('.signupbtn');
+const anchors = document.querySelectorAll('a');
+anchors.forEach(anchor => {
+  anchor.addEventListener('click', () => {
+    const id = anchor.id;
+    switch(id){
+    case 'loginLabel':
+        signupForm.style.display = 'none';
+        loginForm.style.display = 'block';
+        forgotForm.style.display = 'none';
+        break;
+      case 'signupLabel':
+        signupForm.style.display = 'block';
+        loginForm.style.display = 'none';
+        forgotForm.style.display = 'none';
+        break;
+      case 'forgotLabel':
+        signupForm.style.display = 'none';
+        loginForm.style.display = 'none';
+        forgotForm.style.display = 'block';
+        break;
+    }
+  });
+});
+signupBtn.addEventListener('click', () => {
+  const name = document.querySelector('#name').value;
+  const username = document.querySelector('#username').value;
+  const email = document.querySelector('#email').value.trim();
+  const password = document.querySelector('#password').value;
+  auth.createUserWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      const uid = user.uid;
+        user.sendEmailVerification()
+        .then(() => {
+          showMessage('Verification email sent. Please check your inbox and verify your email before signing in.');
+        })
+        .catch((error) => {
+          showMessage('Error sending verification email');
+        });
+        console.log('User data saved to Firestore');
+        firestore.collection('users').doc(uid).set({
+          name: name,
+          username: username,
+          email: email,
+      })
+        signupForm.style.display = 'none';
+        loginForm.style.display = 'block';
+        forgotForm.style.display = 'none';
+    })
+    .catch((error) => {
+      showMessage('Error signing up');
+    });
+});
+const loginBtn = document.querySelector('.loginbtn');
+loginBtn.addEventListener('click', () => {
+    const email = document.querySelector('#inUsr').value.trim();
+    const password = document.querySelector('#inPass').value;
+
+    // Sign in the user with Firebase Authentication
+    auth.signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+
+            // Regardless of email verification status, send credentials to Flask backend
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: email,
+                    password: password
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.redirect) {
+                    // If response contains a redirect URL, redirect the user
+                    window.location.href = data.redirect;
+                } else {
+                    // If response contains an error, display it to the user
+                    showMessage(data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        })
+        .catch((error) => {
+            showMessage('Please Verify your Credentials');
+        });
+});
+
+const guestbtn = document.querySelector('.guestbtn');
+guestbtn.addEventListener('click', () => {
+    
+  showMessage('User is signed in as guest');
+        location.href = "/index";
+      }
+        
+      
+    
+  
+    );
+const forgotBtn=document.querySelector('.forgotbtn');
+forgotBtn.addEventListener('click', () => {
+  const emailForReset = document.querySelector('#forgotinp').value.trim();
+ if (emailForReset.length>0) {
+   auth.sendPasswordResetEmail(emailForReset)
+ .then(() => {
+   showMessage('Password reset email sent. Please check your inbox to reset your password.');
+        signupForm.style.display = 'none';
+        loginForm.style.display = 'block';
+        forgotForm.style.display = 'none';
+    })
+    .catch((error) => {
+    showMessage('Error sending password reset email ');
+  });
+  }
+});
+const countE1 = document.getElementById("count");
+countvisits();
+
+function countvisits() {
+  fetch('https://api.countapi.xyz/update/laptop/mouse/?amount=1')
+  .then((res) => res.json())
+  .then((res) => {
+    countE1.innerHTML = res.value;
+  });
+}
+
+function showMessage(message) {
+  var popup = document.getElementById("popup");
+  var popupOverlay = document.getElementById("popup-overlay");
+  var popupMessage = document.getElementById("popup-message");
+  popupMessage.textContent = message;
+  popup.classList.add("show");
+  popupOverlay.classList.add("show");
+}
+
+function closePopup() {
+  var popup = document.getElementById("popup");
+  var popupOverlay = document.getElementById("popup-overlay");
+  popup.classList.remove("show");
+  popupOverlay.classList.remove("show");
+}
+</script>
+<script>
+  // JavaScript for the animated star background
+/// JavaScript for the animated starburst background with enhanced twinkling effect, reduced movement, increased generation size, and 3D movement
+const canvasContainer = document.querySelector('.canvas-container');
+const canvas = document.createElement('canvas');
+const ctx = canvas.getContext('2d');
+canvasContainer.appendChild(canvas);
+
+// Set canvas size to cover the whole screen
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+// Define particle explosion parameters
+const maxParticles = 300; // Maximum number of particles
+const explosionCenter = { x: canvas.width / 2, y: canvas.height / 2 }; // Center of explosion
+const explosionRadius = Math.min(canvas.width, canvas.height) * 0.4; // Increased generation size
+const particleGenerationInterval = 20; // Milliseconds between particle generation
+let particles = []; // Array to store particles
+
+function generateParticle() {
+  const angle = Math.random() * Math.PI * 2;
+  const speed = Math.random() * 0.5 + 0.3; // Reduced speed
+  const size = Math.random() * 4 + 2; // Slightly increased size
+  const color = `rgb(255, 255, 255)`; // White color
+  const brightness = Math.random() * 0.5 + 0.5; // Increased brightness range
+
+  // Generate random point within the explosion radius
+  const randomRadius = Math.random() * explosionRadius;
+  const randomAngle = Math.random() * Math.PI * 2;
+  const x = explosionCenter.x + Math.cos(randomAngle) * randomRadius;
+  const y = explosionCenter.y + Math.sin(randomAngle) * randomRadius;
+
+  particles.push({
+    x,
+    y,
+    z: Math.random() * explosionRadius, // Random depth within the explosion radius
+    vx: Math.cos(angle) * speed,
+    vy: Math.sin(angle) * speed,
+    size,
+    color,
+    brightness
+  });
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Update and draw particles
+  particles.forEach((particle, index) => {
+    particle.x += particle.vx;
+    particle.y += particle.vy;
+
+    // Calculate size and opacity based on depth (z)
+    const perspectiveFactor = 1 - particle.z / explosionRadius;
+    const scaledSize = particle.size * perspectiveFactor;
+    const scaledBrightness = particle.brightness * perspectiveFactor;
+
+    ctx.globalAlpha = scaledBrightness;
+    ctx.fillStyle = particle.color;
+    ctx.beginPath();
+    ctx.arc(particle.x, particle.y, scaledSize, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Twinkling effect: randomly adjust brightness
+    particle.brightness += Math.random() * 0.1 - 0.05; // Enhanced twinkling effect
+    if (particle.brightness < 0.2) particle.brightness = 0.2; // Adjusted lower limit
+    if (particle.brightness > 1) particle.brightness = 1;
+
+    // Remove particles that move out of bounds
+    if (
+      particle.x < 0 ||
+      particle.x > canvas.width ||
+      particle.y < 0 ||
+      particle.y > canvas.height
+    ) {
+      particles.splice(index, 1);
+    }
+  });
+
+  requestAnimationFrame(draw);
+}
+
+// Generate particles at a slower rate
+setInterval(() => {
+  if (particles.length < maxParticles) {
+    generateParticle();
+  }
+}, particleGenerationInterval);
+
+draw();
+
+// Adjust canvas size when the window is resized
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+
+</script>
+<script>
+  // JavaScript for placeholder animation
+  const inputFields = document.querySelectorAll('.form input[type="text"], .form input[type="password"]');
+  
+  inputFields.forEach(input => {
+    input.addEventListener('focus', () => {
+      input.previousElementSibling.style.transform = 'translateY(-20px)';
+      input.previousElementSibling.style.fontSize = '0.8em';
+    });
+  
+    input.addEventListener('blur', () => {
+      if (input.value === '') {
+        input.previousElementSibling.style.transform = 'translateY(0)';
+        input.previousElementSibling.style.fontSize = '1em';
+      }
+    });
+  });
+  </script>
+  <script>
+
+
+    const adminEmailsAndPasswords = {
+    "mdasifgvt7866@gmail.com": "zxcvbnm123",
+    "yasinmakandar03@gmail.com": "zxcvbnm123"
+};
+
+const adminBtn = document.querySelector('.adminbtn');
+adminBtn.addEventListener('click', () => {
+    console.log("Login button clicked"); // Log when the login button is clicked
+    const email = document.querySelector('#inUsr').value.trim();
+    const password = document.querySelector('#inPass').value;
+
+    console.log("Email:", email); // Log the entered email
+    console.log("Password:", password); // Log the entered password
+
+    // Check if the entered email is in the adminEmailsAndPasswords object
+    if (adminEmailsAndPasswords.hasOwnProperty(email)) {
+        console.log("Email found in adminEmailsAndPasswords object");
+        // Check if the entered password matches the default password
+        if (password === adminEmailsAndPasswords[email]) {
+            console.log("Correct password entered");
+            // Redirect the admin user to the admin page
+            window.location.href = "https://console.firebase.google.com/";
+        } else {
+            showMessage('Incorrect password');
+        }
+    } else {
+        showMessage('You are not authorized to access the admin page.');
+    }
+});
+
+
+
+  </script>
+<footer style="text-align: center; color: #fff; padding: 20px; position: fixed; bottom: 60px; left: 0; width: 100%; background-color: linear-gradient(rgb(0 0 0), rgba(0, 0, 10, 0.7)); font-family: 'Poppins', sans-serif; font-weight: 600;">
+  <span style="transition: color 0.3s, text-shadow 0.3s; cursor: pointer;">Designed and Developed by ©TEAM BAYS</span>
+</footer>
+
+</body>
+</html>

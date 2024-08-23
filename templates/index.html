@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title -->
+  <title>Heart Care Website </title>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/static/styles/styleweb.css">
+  <!-- JavaScript File -->
+  <script src="/script.js" defer></script>
+  <link rel="stylesheet" text="text/CSS"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" text="text/CSS"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body onload="myFunction()">
+  <div class="loading-wrapper">
+    <div class="loading">
+      <img src="{{ url_for('static',filename='main.png') }}" id="loading-img" />
+    </div>
+  </div>
+
+  <!-- Back to top button -->
+  <a href="#header" id="back-top-div" class="back-top-wrap">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+  <header id="header">
+    <nav class="nav" id="nav">
+      <a class="navbar-brand" href="#"> 
+        <img src="{{ url_for('static',filename='main.png') }}" alt="Logo" class="logo glowing-heart" />
+      </a>
+      
+      <div class="nav-links" id="navLinks">
+        <ul class="links" id="navmenu">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#services"> OUR SERVICE</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="{{ url_for('chatu') }}">CONTACT US </a></li>
+          <li><a href="{{ url_for('hey') }}">SIGN OUT</a></li>
+        </ul>
+      </div>
+      <div class="hamburger" id="ham">
+        <i class="cancel fa-solid fa-xmark"></i>
+
+        <svg class="burger" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
+          height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z">
+          </path>
+        </svg>
+      </div>
+    </nav>
+    <div class="menu" id="menu">
+      <ul class="menu-link">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICE</a></li>
+        <li><a href="html/contact.html">CONTACT US </a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h1 class="fade-in-onload">Welcome to HeartCare</h1>
+      <h3 class="fade-in-onload">Take care of your heart, transform your life.</h3>
+      <a href="#services" class="button-34 fade-in-onload" alt="Explore">Explore</a>
+    </div>
+    
+    
+
+  </header>
+ <!-- SERVICES SECTION -->
+  <section id="services">
+    <h1>Our Service</h1>
+    <div data-aos="zoom-in" data-aos-duration="800" class="container">
+      <div class="responsive audio">
+        <div class="round-image">
+          <img src="{{ url_for('static',filename='heartpic.jpg') }}" alt="audio" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>Heart Disease Prediction</h2>
+          <p>
+            Predict the chances of getting the Heart disease!!!
+          </p>
+          <a href="{{ url_for('heart') }}">
+            Let's Explore
+          </a>
+        </div>
+      </div>
+  </section>
+
+   <!-- About Section -->
+   <section id="about" class="about">
+    <h3><span style="color: #08D9D6; font-size: 3.5rem;">MEET OUR MEMBERS</span></h3>
+
+    <div class="box">
+      <div data-aos="fade-up" data-aos-duration="800" class="card">
+        <img src="{{ url_for('static',filename='female1.png') }}" alt="" loading="lazy">
+        <h5>Bhavana</h5>
+        <div class="pra">
+          <p>Member</p>
+          <a href="https://www.linkedin.com/in/bhavana-s-d-626bb728a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><button>Let's Connect</button></a>
+        </div>
+      </div>
+
+      <div data-aos="fade-up" data-aos-duration="800" class="card">
+        <img src="{{ url_for('static',filename='female1.png') }}" alt="" loading="lazy">
+        <h5>Shreya</h5>
+        <div class="pra">
+          <p>Member</p>
+          <a href="https://www.linkedin.com/in/shreyakumari13/"><button>Let's Connect</button></a>
+        </div>
+      </div>
+      <div data-aos="fade-up" data-aos-duration="800" class="card">
+        <img src="{{ url_for('static',filename='male1.jpg') }}" alt="" loading="lazy">
+        <h5>Mohammed Asif</h5>
+        <div class="pra">
+          <p>Member</p>
+          <a href="https://linkedin.com/in/mohammed-asif007"><button>Let's Connect</button></a>
+        </div>
+      </div>
+     
+
+      <div data-aos="fade-up" data-aos-duration="800" class="card">
+        <img src="{{ url_for('static',filename='male1.jpg') }}" alt="sasanka" loading="lazy">
+        <h5>Yasin Makandar</h5>
+        <div class="pra">
+          <p>Member</p>
+          <a href="https://www.linkedin.com/in/yasin-makandar/"><button>Let's Connect</button></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="faq_heading">
+      <h1>Frequently Asked Questions</h1>
+    </div>
+    <div class="accordion">
+      <div class="accordion__item">
+        <button class="accordion__btn">
+
+          <span class="accordion__caption"><i class="far fa-lightbulb"></i>Who are we and what do we do?</span>
+          <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+        </button>
+
+        <div class="accordion__content">
+          <p>We are a team of open source contributors who have created this website "HeartCare"
+            with the aim
+            to provide a one step solution to get a basic information about Heart Disease and predict* the chances of getting Heart Disease . We hope that everyone can live a
+            Healthy life with the help of HealthCare.</p>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <button class="accordion__btn">
+
+          <span class="accordion__caption"><i class="far fa-lightbulb"></i>What are the services we offer?</span>
+          <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+        </button>
+
+        <div class="accordion__content">
+          <p>We offer Heart Disease Prediction Service using AI/ML
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <button class="accordion__btn">
+
+          <span class="accordion__caption"><i class="far fa-lightbulb"></i>How can you Contact Us?</span>
+          <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+        </button>
+
+        <div class="accordion__content">
+          <p> You can contact us via the option provided in navigation bar else <a class="email" href="{{ url_for('chatu') }}">Click Here</a> to directly navigate to contact us page
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <button class="accordion__btn">
+
+          <span class="accordion__caption"><i class="far fa-lightbulb"></i>What is Heart Disease Prediction?</span>
+          <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+        </button>
+
+        <div class="accordion__content">
+          <p>The algorithm model uses machine learning (ML) techniques to compute and predict the patient cardiovascular health after it
+             has obtained essential data from the human body. This data include the patient heart rate, ECG signal, and cholesterol</p>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <button class="accordion__btn">
+
+          <span class="accordion__caption"><i class="far fa-lightbulb"></i>Is this website demanding any Subscription from the User?</span>
+          <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+        </button>
+
+        <div class="accordion__content">
+          <p>NO!!, this website is open-source and completely free to use.</p>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <button class="accordion__btn">
+
+          <span class="accordion__caption"><i class="far fa-lightbulb"></i>Do we offer other services rather than Heart Disease Prediction?</span>
+          <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+        </button>
+
+        <div class="accordion__content">
+          <p>Currently as of now we only have Heart Disease Prediction, But in future we may deploy other services too!!</p>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <button class="accordion__btn">
+
+          <span class="accordion__caption"><i class="far fa-lightbulb"></i>How accurately do this website predicts the Heart Disease?</span>
+          <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+        </button>
+
+        <div class="accordion__content">
+          <p>Indeed this website predict the Heart Disease accurately, But it is recommeded that the patient should consult the certified Physician, and should not depend on data generated by website</p>
+        </div>
+      </div>
+
+      <div class="accordion__item">
+        <button class="accordion__btn">
+            <span class="accordion__caption"><i class="far fa-lightbulb"></i>Getting any difficulty using our service?</span>
+            <span class="accordion__icon"><i class="fa fa-plus"></i></span>
+        </button>
+    
+        <div class="accordion__content">
+            <p>No worries!! you can watch our quick guide to using our service</p>
+            <iframe src="https://www.youtube.com/embed/8BMe2GUHxHg?si=fWi1VfUEungrH_EZ" height="300" width="650" allowfullscreen="true"></iframe>
+        </div>
+    </div>
+    
+    </div>
+    </div>
+  </section>
+
+  <!-- footer start -->
+  <footer>
+    <div class="footer-container">
+      <!--logo and info column-->
+      <div class="col">
+        <!--logo insert-->
+        <a href="#" style="text-decoration: none;" class="footercontent">
+          <h2 class="footerheading">HeartCare</h2>
+         
+          <p>
+           <span class="bolded">Contributors:</span> 
+          </p>
+      
+          <p class="footerpara">
+            Bhavana S D
+          </p>
+          <p class="footerpara">
+            Mohammed Asif
+          </p>
+          <p class="footerpara">
+            Shreya Kumari
+          </p>
+          <p class="footerpara">
+            Yasin Makandar
+          </p>
+        </a>
+      </div>
+
+      <!--ADDRESS COLUMN-->
+
+      <div class="footer-side-col">
+        <div class="col">
+          <h3>
+            ADDRESS
+            <div class="underline"><span></span></div>
+          </h3>
+          <p>Gangawati,Karnataka,India</p>
+          <p class="email-id"><a href="mailto:mdasifgvt7866@gmail.com">mdasifgvt7866@gmail.com</a></p>
+          <p class="email-id"><a href="mailto:yasinmakandar03@gmail.com">yasinmakandar03@gmail.com</a></p>
+        </div>
+        <!--HOME COLUMN-->
+        <!--OUR SERVICES COLUMN-->
+        <div class="col">
+          <h3>
+            SERVICE
+            <div class="underline"><span></span></div>
+          </h3>
+          <ul>
+            <li>
+              <a href="{{ url_for('heart') }}">Heart Disease Prediction</a>
+            </li>
+          </ul>
+        </div>
+        <!--CONTACTS COLUMN-->
+        <div id="contact" class="col">
+          <h3>
+            CONTACTS
+            <div class="underline"><span></span></div>
+          </h3>
+          <div class="social-menu">
+            <ul>
+              <a href="https://github.com/YasinMakandar" target="_blank">
+                <li id="social-github"><i class="fab fa-2x fa-github"></i></li>
+              </a>
+              <a href="https://linkedin.com/in/mohammed-asif-76b643284" target="_blank">
+                <li id="social-linkedin"><i class="fab fa-2x fa-linkedin-in"></i></li>
+              </a>
+              <a href="https://linkedin.com/in/mohammed-asif-76b643284" target="_blank">
+                <li id="social-gmail"><i class="fab fa-2x fa-gmail"></i></li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+
+    let preloader = document.querySelector(".loading-wrapper");
+    function myFunction() {
+      preloader.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    let navbar = document.querySelector("#nav");
+    let navmenu = document.querySelector("#navmenu");
+
+    window.onscroll = function () {
+      if (window.pageYOffset >= navmenu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    };
+
+    window.onscroll = () => {
+      if (window.scrollY > 100) {
+        navbar.classList.add('nav-active');
+      } else {
+        navbar.classList.remove('nav-active');
+      }
+    };
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./serviceworker.js')
+          .then((reg) => console.log('Success', reg.scope))
+          .catch((err) => console.log('Error', err))
+      })
+    }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="index.js"></script>
+  <script src="{{ url_for('static',filename='script.js') }}"></script>
+  <script src="{{ url_for('static',filename='scriptfaq.js') }}"></script>
+<script> document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll('.fade-in-onload');
+  elements.forEach(element => {
+    element.classList.add('fade-in');
+  });
+});
+</script>
+</body>
+
+</ht

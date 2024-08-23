@@ -1,0 +1,598 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hii",
+        "Hey",
+        "How are you",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hello there, how may I help you? Type <b>'Instructions'</b> Or <b>'Use'</b> for getting instructions to use me."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "Ok Bye"
+      ],
+      "responses": [
+        "See you later",
+        "Have a nice day",
+        "Bye!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "That's helpful",
+        "Thank's a lot!",
+        "Thankyou"
+      ],
+      "responses": [
+        "Happy to help!",
+        "Any time!",
+        "My pleasure"
+      ]
+    },
+    {
+      "tag": "What",
+      "patterns": [
+        "What do you do?"
+      ],
+      "responses": [
+        "I solve your queries, tell me if you have any."
+      ]
+    },
+    {
+      "tag": "Name",
+      "patterns": [
+        "What is your name?",
+        "Your name"
+      ],
+      "responses": [
+        "My name is <b>Pulse</b>",
+        "You can call me <b>Pulse</b>"
+      ]
+    },
+    {
+      "tag": "Who",
+      "patterns": [
+        "Your developers",
+        "Who developed you",
+        "Developers",
+        "Developers team"
+      ],
+      "responses": [
+        "Team <b>BAYS</b>"
+      ]
+    },
+    {
+      "tag": "Attributes",
+      "patterns": [
+        "Tell me about all the required attributes",
+        "Attributes",
+        "Input Values"
+      ],
+      "responses": [
+        "Please be specific",
+        "Input specific values",
+        "Input specific attributes"
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Do you know a joke?"
+      ],
+      "responses": [
+        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+        "What did the buffalo say when his son left for college? Bison."
+      ]
+    },
+    {
+      "tag": "Age",
+      "patterns": [
+        "What is Age?",
+        "Age",
+        "What is age",
+        "What should I fill in the age?",
+        "Tell me about Age attribute"
+      ],
+      "responses": [
+        "This refers to the <b>Age</b> of the person being evaluated for heart disease risk. Age is a significant factor in heart disease risk assessment, as the likelihood of developing heart disease increases with age."
+      ]
+    },
+    {
+      "tag": "Gender",
+      "patterns": [
+        "What is Gender?",
+        "Gender",
+        "What is Gender",
+        "What should I fill in the Gender?",
+        "Tell me about Gender attribute"
+      ],
+      "responses": [
+        "<b>Gender</b> refers to whether the individual is male or female. Gender can influence heart disease risk factors and may impact how certain symptoms present."
+      ]
+    },
+    {
+      "tag": "Chest Pain Types",
+      "patterns": [
+        "What are Chest pain types?",
+        "Chest pain types",
+        "What is Chest pain types",
+        "What are Chest pain types",
+        "What should I fill in the Chest pain types?",
+        "Tell me about Chest pain types attribute",
+        "chest pain"
+      ],
+      "responses": [
+        "This indicates the type of chest pain or discomfort experienced by the individual. Common types include <b>typical angina</b> (classic chest pain related to heart disease), <b>atypical angina</b> (chest pain with different characteristics), <b>non-anginal pain</b> (pain not related to heart disease), and <b>asymptomatic</b> (no chest pain)."
+      ]
+    },
+    {
+      "tag": "Typical angina",
+      "patterns": [
+        "What are the symptoms of typical angina?",
+        "Can you describe typical angina?",
+        "What does typical angina feel like?",
+        "Typical angia",
+        "What is Typical angina?",
+        "What is Typical angina"
+      ],
+      "responses": [
+        "<b>Typical angina</b> is characterized by chest pain or discomfort that feels like pressure, squeezing, or heaviness in the chest. It may also be accompanied by pain in the arms, neck, jaw, shoulders, or back. The pain is usually triggered by physical exertion or emotional stress and typically subsides with rest or nitroglycerin."
+      ]
+    },
+    {
+      "tag": "Atypical Angina",
+      "patterns": [
+        "What are the symptoms of Atypical angina?",
+        "Can you describe Atypical angina?",
+        "What does Atypical angina feel like?",
+        "ATypical angia",
+        "What is Atypical angina?",
+        "What is Atypical angina"
+      ],
+      "responses": [
+        "<b>Atypical angina</b> refers to chest pain or discomfort that does not fit the typical pattern of angina. It may present as sharp, stabbing, burning, or dull pain in the chest. The pain may be located in different areas of the chest or may radiate to the arms, shoulders, neck, jaw, or back. It can occur at rest or during physical activity and may not always respond to nitroglycerin."
+      ]
+    },
+    {
+      "tag": "Non-anginal Pain",
+      "patterns": [
+        "What are the symptoms of Non-anginal Pain?",
+        "What are the symptoms of Non anginal Pain?",
+        "Can you describe Non-anginal Pain?",
+        "Can you describe Non anginal Pain?",
+        "What does Non-anginal Pain feel like?",
+        "What does Non anginal Pain feel like?",
+        "Non-anginal Pain",
+        "Non anginal Pain",
+        "What is Non-anginal Pain?",
+        "What is Non anginal Pain?",
+        "What is Non-anginal Pain",
+        "What is Non anginal Pain"
+      ],
+      "responses": [
+        "<b>Non-anginal</b> pain refers to chest discomfort or discomfort in the upper body that is not related to the heart. It may present as a sharp or stabbing pain, burning sensation, or discomfort that feels like indigestion. Unlike angina, non-anginal pain is not typically triggered by physical exertion or emotional stress."
+      ]
+    },
+    {
+      "tag": "Asymptomatic",
+      "patterns": [
+        "What does asymptomatic mean?",
+        "Can you explain asymptomatic?",
+        "What are the characteristics of asymptomatic chest pain?",
+        "Asymptomatic",
+        "What is Asymptomatic"
+      ],
+      "responses": [
+        "<b>Asymptomatic</b> means having no symptoms. In the context of chest pain, asymptomatic chest pain refers to the absence of chest pain or discomfort. While chest pain is a common symptom of heart conditions such as angina, some individuals may have heart disease without experiencing any chest pain or other symptoms. These individuals are considered asymptomatic."
+      ]
+    },
+    {
+      "tag": "Resting Blood Pressure (in mm/Hg)",
+      "patterns": [
+        "What does Resting Blood Pressure mean?",
+        "What does Resting Blood Pressure (in mm/Hg) mean?",
+        "Can you explain Resting Blood Pressure?",
+        "Can you explain Resting Blood Pressure (in mm/Hg)?",
+        "What are the characteristics of Resting Blood Pressure chest pain?",
+        "What are the characteristics of Resting Blood Pressure chest pain (in mm/Hg)?",
+        "Resting Blood Pressure",
+        "Resting Blood Pressure (in mm/Hg)",
+        "What is Resting Blood Pressure",
+        "What is Resting Blood Pressure (in mm/Hg)"
+      ],
+      "responses": [
+        "<b>Resting blood pressure</b> is the pressure exerted by circulating blood against the walls of the blood vessels when the person is at rest. It is measured in millimeters of mercury (mmHg). Normal resting blood pressure is typically around 120/80 mmHg."
+      ]
+    },
+    {
+      "tag": "Cholesterol Level",
+      "patterns": [
+        "What is Cholesterol Level",
+        "What is Cholesterol Level?",
+        "What does Cholesterol Level mean?",
+        "Cholesterol Level",
+        "Cholesterol Level?"
+      ],
+      "responses": [
+        "<b>Cholesterol level</b> refers to the amount of cholesterol in the blood. Cholesterol is a fatty substance that can build up in the arteries, increasing the risk of heart disease. It is measured in milligrams per deciliter (mg/dL)."
+      ]
+    },
+    {
+      "tag": "Is Fasting Blood Pressure > 120mg/Dl",
+      "patterns": [
+        "Is Fasting Blood Pressure > 120mg/Dl",
+        "Is Fasting Blood Pressure > 120mg/Dl?",
+        "Is Fasting Blood Pressure?",
+        "Is Fasting Blood Pressure",
+        "What is Is Fasting Blood Pressure > 120mg/Dl",
+        "What Is Fasting Blood Pressure > 120mg/Dl",
+        "What Is Fasting Blood Pressure > 120mg/Dl?",
+        "Define Is Fasting Blood Pressure > 120mg/Dl"
+      ],
+      "responses": [
+        "This indicates whether the fasting blood glucose level is above 120 mg/dL. Elevated fasting blood glucose levels may be associated with an increased risk of heart disease and diabetes."
+      ]
+    },
+    {
+      "tag": "Resting Electro Cardio Graphic Result",
+      "patterns": [
+        "What is Resting Electro Cardio Graphic Result?",
+        "What is Resting Electro Cardio Graphic Result",
+        "Resting Electro Cardio Graphic Result?",
+        "Define Resting Electro Cardio Graphic Result",
+        "Resting Electro Cardio Graphic Result",
+        "What do you mean by Resting Electro Cardio Graphic Result?",
+        "What do you mean by Resting Electro Cardio Graphic Result"
+      ],
+      "responses": [
+        "This refers to the results of an electrocardiogram (ECG or EKG) taken while the person is at rest. An ECG measures the electrical activity of the heart and can help detect heart rhythm abnormalities and other cardiac issues."
+      ]
+    },
+    {
+      "tag": "STT Abnormality",
+      "patterns": [
+        "What is STT Abnormality",
+        "What is STT Abnormality?",
+        "STT Abnormality",
+        "Define STT Abnormality",
+        "STT Abnormality means",
+        "STT Abnormality means?"
+      ],
+      "responses": [
+        "<b>ST-T abnormality</b> means there's something unusual in the shape or position of certain lines on a heart test. These lines show how the heart's electrical activity is working. When they're abnormal, it might suggest that there's a problem with how the heart is functioning, but it doesn't always mean there's a serious issue."
+      ]
+    },
+    {
+      "tag": "IV Hypertropy",
+      "patterns": [
+        "What is IV Hypertropy",
+        "What is IV Hypertropy?",
+        "IV Hypertropy",
+        "Define IV Hypertropy",
+        "IV Hypertropy means",
+        "IV Hypertropy means?"
+      ],
+      "responses": [
+        "<b>IV Hypertrophy</b> means the muscle in the main pumping chamber of the heart is thicker than it should be. This can happen if the heart has to work harder than usual, like when someone has high blood pressure or other heart problems. It's like a muscle getting bigger from lifting weights, but in this case, it's because the heart has to pump harder to move blood around the body."
+      ]
+    },
+    {
+      "tag": "Maximum Heart Rate Achieved",
+      "patterns": [
+        "What is Maximum Heart Rate Achieved",
+        "What is Maximum Heart Rate Achieved?",
+        "What is Maximum Heart Rate?",
+        "What is Maximum Heart Rate",
+        "Maximum Heart Rate Achieved",
+        "Maximum Heart Rate Achieved?",
+        "Maximum Heart Rate",
+        "Maximum Heart Rate?",
+        "Define Maximum Heart Rate Achieved",
+        "Define Maximum Heart Rate"
+      ],
+      "responses": [
+        "<b>Maximum heart rate achieved</b> is the highest heart rate reached during physical activity. It is often used to assess cardiovascular fitness and can be a factor in determining heart disease risk."
+      ]
+    },
+    {
+      "tag": "Does Exercise Induced Angina?",
+      "patterns": [
+        "What Does Exercise Induced Angina means",
+        "Explain Does Exercise Induced Angina?",
+        "Does Exercise Induced Angina?",
+        "Does Exercise Induced Angina",
+        "Exercise Induced Angina",
+        "Exercise Induced Angina means",
+        "What is Exercise Induced Angina",
+        "What is Exercise Induced Angina?"
+      ],
+      "responses": [
+        "This indicates whether the individual experiences chest pain or discomfort during physical exertion (exercise-induced angina). Angina during exercise can be a symptom of underlying heart disease."
+      ]
+    },
+    {
+      "tag": "Old Peak (ST Depression Induced by Exercise Relative to Rest)",
+      "patterns": [
+        "What is Old Peak (ST Depression Induced by Exercise Relative to Rest)?",
+        "What is Old Peak (ST Depression Induced by Exercise Relative to Rest)",
+        "What is Old Peak?",
+        "What is Old Peak",
+        "Old Peak (ST Depression Induced by Exercise Relative to Rest)",
+        "Old Peak",
+        "Define Old Peak (ST Depression Induced by Exercise Relative to Rest)",
+        "Old Peak (ST Depression Induced by Exercise Relative to Rest) means",
+        "Old Peak means",
+        "ST Depression Induced by Exercise Relative to Rest means",
+        "(ST Depression Induced by Exercise Relative to Rest)"
+      ],
+      "responses": [
+        "<b>Old peak</b> refers to the amount of depression of the ST segment on an electrocardiogram (ECG) during exercise compared to rest. ST depression during exercise can indicate insufficient blood flow to the heart muscle, potentially due to coronary artery disease."
+      ]
+    },
+    {
+      "tag": "Slope of ST Segment",
+      "patterns": [
+        "What is Slope of ST Segment?",
+        "What is Slope of ST Segment",
+        "Slope of ST Segment means",
+        "Slope of ST Segment",
+        "Define Slope of ST Segment",
+        "What do you mean by Slope of ST Segment?",
+        "What do you mean by Slope of ST Segment"
+      ],
+      "responses": [
+        "The slope of the ST segment on an electrocardiogram (ECG) indicates the rate of change in the electrical activity of the heart. Changes in the ST segment can provide important diagnostic information about heart conditions. Their are three types \n (0) Upsloping: An upsloping ST-segment may be rapidly or slowly upsloping from a depressed J-point.\n (1) Horizontal: A straight ST segment can be horizontal.\n (2) Downsloping: A slight down-sloping ST segment can be a normal variant."
+      ]
+    },
+    {
+      "tag": "Number of major vessels (0-3) colored by fluoroscopy",
+      "patterns": [
+        "What is Number of major vessels (0-3) colored by fluoroscopy?",
+        "What is Number of major vessels (0-3) colored by fluoroscopy means",
+        "Number of major vessels (0-3) colored by fluoroscopy means",
+        "Number of major vessels (0-3) colored by fluoroscopy",
+        "Number of major vessels",
+        "Number of major vessels colored by fluoroscopy",
+        "colored by fluoroscopy",
+        "fluoroscopy"
+      ],
+      "responses": [
+        "This refers to the number of major blood vessels (0 to 3) that show significant narrowing or blockage as observed using a fluoroscopy procedure. Narrowing of the major vessels can indicate the presence and severity of coronary artery disease."
+      ]
+    },
+    {
+      "tag": "Thal Type",
+      "patterns": [
+        "What is Thal Type?",
+        "What is Thal Type",
+        "Thal Type",
+        "Thal Type means",
+        "What does Thal Type means?",
+        "What does Thal Type means",
+        "Define Thal Type",
+        "Fixed Defect",
+        "What is Fixed Defect?",
+        "What is Fixed Defect",
+        "Fixed Defect means",
+        "Reversible Defect means",
+        "Reversible Defect",
+        "What is Reversible Defect?",
+        "What is Reversible Defect"
+      ],
+      "responses": [
+        "<b>Thal type</b> refers to the type of thallium scan or stress test used to evaluate blood flow to the heart muscle. Thallium scans are nuclear imaging tests that can help diagnose coronary artery disease and assess myocardial perfusion. Different types of thallium scans may provide different diagnostic information. There are two types <b>alpha(reversible defect)</b>, <b>Beta(Fixed Defect)</b>"
+      ]
+    },
+    {
+      "tag": "Temperature",
+      "patterns": [
+        "I have high body temperature",
+        "Body temperature is high",
+        "My body temperature is high",
+        "Temperature",
+        "My body is feeling hot",
+        "High Temperature",
+        "High Body Temperature"
+      ],
+      "responses": [
+        "<b>Temperature</b> refers to the degree of hotness or coldness of the body, typically measured using a thermometer. Normal body temperature ranges between 36.5°C to 37.5°C (97.7°F to 99.5°F). Elevated temperature may indicate fever, often associated with infections.\n<b>Kindly consult your doctor.</b>"
+      ]
+    },
+    {
+      "tag": "Common Cold",
+      "patterns": [
+        "Common Cold",
+        "Cold",
+        "What are the treatments for the common cold?",
+        "How can I treat a cold at home?",
+        "What should I do if I have a cold?",
+        "Cold Symptoms",
+        "Common Cold Symptoms",
+        "Common Cold Treatment",
+        "Common Cold Treatments"
+      ],
+      "responses": [
+        "The <b>Common cold</b> is an illness affecting your nose and throat. Most often, it's harmless, but it might not feel that way. Germs called viruses cause a common cold.\n<b>Homemade treatments</b> include rest, staying hydrated, drinking warm fluids like tea or broth, using saline nasal drops, and gargling with warm salt water.\n<b>Professional treatments</b> may include over-the-counter cold medications, antihistamines, decongestants, or prescription antiviral drugs if warranted.\n<b>Consult your doctor</b>."
+      ]
+    },
+    {
+      "tag": "Influenza (Flu)",
+      "patterns": [
+        "Influenza (Flu)",
+        "Influenza",
+        "Flu",
+        "What is Flu?",
+        "What is Flu",
+        "What are the treatments for the flu?",
+        "How can I treat the flu at home?",
+        "What should I do if I have the flu?",
+        "Symptoms of flu",
+        "Flu Symptoms",
+        "Flu treatments",
+        "What is meant by Flu?"
+      ],
+      "responses": [
+        "<b>Flu</b> is a contagious respiratory illness caused by influenza viruses that infect the nose, throat, and sometimes the lungs. It can cause mild to severe illness, and at times can lead to death.\n<b>Homemade treatments</b> for the flu include resting, staying hydrated, drinking warm fluids, using over-the-counter pain relievers and fever reducers, and using a humidifier to ease congestion. \n<b>Professional treatments</b> may include antiviral medications prescribed by a doctor, especially if started within the first 48 hours of symptom onset.\n<b>Consult your doctor.</b>"
+      ]
+    },
+    {
+      "tag": "Allergies",
+      "patterns": [
+        "How can I treat allergies at home?",
+        "What are some homemade remedies for allergies?",
+        "What should I do if I have allergies?",
+        "Allergy",
+        "Allergies",
+        "Itchy nose",
+        "Running nose",
+        "Itchy",
+        "My nose feels itchy",
+        "My eyes are watery",
+        "Watery Eyes",
+        "Runny nose"
+      ],
+      "responses": [
+        "<b>Allergies</b> occur when your immune system reacts to a foreign substance — such as pollen, bee venom or pet dander — or a food that doesn't cause a reaction in most people.\n<b>Homemade treatments</b> for allergies include avoiding triggers, using saline nasal irrigation, keeping windows closed to prevent pollen entry, using air purifiers, and using over-the-counter antihistamines or nasal corticosteroids.\n<b>Professional treatments</b> may include allergy testing, allergen immunotherapy (allergy shots), or prescription medications such as antihistamines, nasal corticosteroids, or allergy shots.\n Kindly consult your doctor."
+      ]
+    },
+    {
+      "tag": "Stomatch Ache",
+      "patterns": [
+        "What is Stomach Ache?",
+        "Can you explain the symptoms of stomach flu?",
+        "How can I treat Stomach Ache at home?",
+        "What professional treatments are available for Stomach Ache?",
+        "Stomach Ache Symptoms",
+        "My Stomach is paining",
+        "Stoamch Pain",
+        "Pain in Stomach",
+        "I have pain in stomach",
+        "Diarrhea symptoms",
+        "Diarrhea",
+        "Vommiting symptoms",
+        "Vommiting"
+      ],
+      "responses": [
+        "<b>Gastroenteritis</b>, commonly known as <b>Stomach flu</b> or <b>Stomach Pain</b>, is an inflammation of the stomach and intestines caused by viral or bacterial infections. It is characterized by symptoms such as diarrhea, nausea, vomiting, abdominal cramps, and fever.\n <b>Home remedies</b> for gastroenteritis include staying hydrated with clear fluids like water, electrolyte solutions, or herbal teas, eating bland foods like crackers, rice, or bananas, getting plenty of rest, and avoiding spicy or fatty foods.\n <b>Professional</b> treatments for gastroenteritis may include prescription medications to control nausea and vomiting, antibiotics for bacterial infections if necessary, and intravenous fluids or electrolyte solutions for severe dehydration.\n <b>Consult your doctor if it preceeds more than two days.</b>"
+      ]
+    },
+    {
+      "tag": "Sore Throat",
+      "patterns": [
+        "What is a sore throat?",
+        "Can you describe the symptoms of a sore throat?",
+        "How can I relieve a sore throat at home?",
+        "What professional treatments are available for a sore throat?",
+        "Sore throat",
+        "What is Sore Throat?",
+        "Sore Throat Symptoms",
+        "Cough",
+        "irritation in throat"
+      ],
+      "responses": [
+        "A <b>Sore Throat</b> is a common condition characterized by pain, irritation, or scratchiness in the throat, often worsened by swallowing. It can be caused by viral infections such as the common cold or flu, bacterial infections such as strep throat, allergies, dry air, or irritants like smoking.\n<b>Home remedies</b> for a sore throat include gargling with warm salt water, drinking warm fluids like tea with honey or broth, sucking on throat lozenges or hard candies, staying hydrated, using humidifiers to add moisture to the air, and resting the voice.\n<b>Professional treatments</b> for a sore throat may include over-the-counter pain relievers and fever reducers such as acetaminophen or ibuprofen to alleviate discomfort and reduce fever. If the sore throat is caused by a bacterial infection like strep throat, antibiotics prescribed by healthcare providers may be necessary. In severe cases or if complications arise, healthcare providers may recommend further evaluation and management.\n<b>Kindly consult your doctor</b>."
+      ]
+    },
+    {
+      "tag": "Use",
+      "patterns": [
+        "How to use you?",
+        "How to use you",
+        "instructions",
+        "Give me hint",
+        "Hint",
+        "Use"
+      ],
+      "responses": [
+        "Type keywords like <b>'Age'</b> or <b>'Gender'</b> <b>''Chest Pain Types'</b>', etc to get information about it. \n For information about common diseases type '<b>common diseases</b>' to get more information about it."
+      ]
+    },
+    {
+      "tag": "Common Disease",
+      "patterns": [
+        "Common Diseases"
+      ],
+      "responses": [
+        "Get information about 'Common Cold', 'Headache', 'Allergy', 'Flu', 'Stomach Pain', 'Sore Throat', 'Temperature', 'Skin Rash', 'Diabetes', 'Fever' "
+      ]
+    },
+    {
+      "tag": "Skin Rash",
+      "patterns": [
+        "What is Skin Rash?",
+        "What is Skin Rash",
+        "Skin Rash",
+        "Skin Rash Symptoms",
+        "What are the treatments for a skin rash?",
+        "How can I treat a skin rash at home?",
+        "What should I do if I have a skin rash?"
+      ],
+      "responses": [
+        "<b>Dermatitis</b> is a common condition that causes swelling and irritation of the skin. It has many causes and forms and often involves itchy, dry skin or a rash.\n\n <br> <b>Homemade Treatments</b> for skin rashes include avoiding irritants or allergens, applying cool compresses or moisturizers to soothe itching, taking oatmeal baths, and using over-the-counter hydrocortisone creams or antihistamines.\n\n <br> <b>Professional Treatments</b> may include prescription-strength corticosteroid creams or oral medications, allergy testing, or referral to a dermatologist for further evaluation."
+      ]
+    },
+    {
+      "tag": "Diabetes",
+      "patterns": [
+        "What is diabetes?",
+        "Can you describe the symptoms of diabetes?",
+        "How can I manage diabetes at home?",
+        "What professional treatments are available for diabetes?",
+        "Diabetes",
+        "Diabetes means",
+        "Diabetes Symptoms",
+        "Define Diabetes"
+      ],
+      "responses": [
+        "<b>Diabetes</b> is a chronic condition characterized by high blood sugar levels (glucose) due to either inadequate insulin production, insulin resistance, or both. There are several types of diabetes, including type 1 diabetes, type 2 diabetes, and gestational diabetes. Symptoms may include increased thirst, frequent urination, fatigue, blurred vision, slow wound healing, and unexplained weight loss.\n <b>Home remedies</b> for managing diabetes include following a healthy diet rich in fruits, vegetables, whole grains, lean proteins, and healthy fats, monitoring blood sugar levels regularly, engaging in regular physical activity, maintaining a healthy weight, managing stress levels, and avoiding tobacco and excessive alcohol consumption.\n <b>Professional treatments</b> for diabetes may include medications such as insulin injections, oral medications like metformin or sulfonylureas to lower blood sugar levels, and other medications to control blood pressure and cholesterol levels. Healthcare providers may also recommend diabetes education, lifestyle modifications, and regular medical check-ups to prevent complications and optimize diabetes management."
+      ]
+    },
+    {
+      "tag": "Fever",
+      "patterns": [
+        "What is a fever?",
+        "Can you describe the symptoms of a fever?",
+        "How can I treat a fever at home?",
+        "What professional treatments are available for a fever?",
+        "Fever",
+        "Fever Symptoms",
+        "Define Fever",
+        "What is Fever"
+      ],
+      "responses": [
+        "A <b>Fever</b> is a temporary increase in body temperature above the normal range, typically as a response to an infection, inflammation, or other underlying medical condition. It is a common symptom of various illnesses, including viral or bacterial infections, inflammatory disorders, and heat-related conditions.\n <b>Home remedies</b> for treating a fever include resting and staying hydrated by drinking plenty of fluids like water, clear broth, or electrolyte solutions. Applying cool compresses to the forehead or taking a lukewarm bath can help reduce body temperature. Over-the-counter fever reducers such as acetaminophen or ibuprofen may also be used to alleviate discomfort.\n <b>Professional treatments</b> for a fever may include prescription medications such as antipyretics to lower body temperature and manage symptoms. In cases of severe or prolonged fever, healthcare providers may recommend further evaluation to identify and treat the underlying cause of the fever, which may involve laboratory tests, imaging studies, or other medical interventions."
+      ]
+    },
+    {
+      "tag": "Headache",
+      "patterns": [
+        "What is a headache?",
+        "Can you describe the symptoms of a headache?",
+        "How can I relieve a headache at home?",
+        "What professional treatments are available for a headache?",
+        "headache",
+        "headache symptoms",
+        "Define headache"
+      ],
+      "responses":[
+        "<b>Headache</b> is a common symptom characterized by pain or discomfort in the head or neck region. There are various types of headaches, including tension headaches, migraines, cluster headaches, and sinus headaches. Symptoms may vary depending on the type of headache but can include dull, aching pain, throbbing pain, pressure or tightness in the head, sensitivity to light or sound, and nausea.\n <br> <b>Home remedies</b> for relieving a headache include resting in a quiet, dark room, applying cold or warm compresses to the forehead or neck, practicing relaxation techniques such as deep breathing or meditation, staying hydrated by drinking plenty of water, and massaging tense muscles in the head, neck, and shoulders.\n <br> <b>Professional treatments</b> for a headache may include over-the-counter pain relievers such as acetaminophen, ibuprofen, or aspirin to alleviate mild to moderate headache pain. For severe or recurrent headaches, healthcare providers may prescribe prescription medications such as triptans or preventive medications like beta-blockers, antidepressants, or anticonvulsants. In some cases, treatments such as nerve blocks, acupuncture, or biofeedback therapy may be recommended."
+      ]
+    }
+  ]
+}
